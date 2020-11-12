@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6a448bc6-5aa9-468c-bc66-a0a9e007cb25}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>run.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="docs\images\build_hamilton.png" />
+    <Content Include="docs\images\build_longest.png" />
+    <Content Include="docs\images\demo_AI_Hamilton.gif" />
+    <Content Include="docs\images\demo_AI_perfect.gif" />
+    <Content Include="docs\images\demo_AI_search.gif" />
+    <Content Include="docs\images\demo_longest.gif" />
+    <Content Include="docs\images\demo_shortest.gif" />
+    <Content Include="docs\images\dqn_compute.png" />
+    <Content Include="docs\images\dqn_net.png" />
+    <Content Include="docs\images\graph_dqn_4_legends.png" />
+    <Content Include="docs\images\graph_dqn_8_legends.png" />
+    <Content Include="docs\images\grid.png" />
+    <Content Include="docs\images\hamilton_cycle.png" />
+    <Content Include="docs\images\solver_dqn.gif" />
+    <Content Include="docs\images\solver_greedy.gif" />
+    <Content Include="docs\images\solver_hamilton.gif" />
+    <Content Include="docs\images\take_shortcuts.png" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="run.py" />
+    <Compile Include="snake\base\direc.py" />
+    <Compile Include="snake\base\map.py" />
+    <Compile Include="snake\base\point.py" />
+    <Compile Include="snake\base\pos.py" />
+    <Compile Include="snake\base\snake.py" />
+    <Compile Include="snake\base\__init__.py" />
+    <Compile Include="snake\game.py" />
+    <Compile Include="snake\gui.py" />
+    <Compile Include="snake\solver\base.py" />
+    <Compile Include="snake\solver\dqn\history.py" />
+    <Compile Include="snake\solver\dqn\logger.py" />
+    <Compile Include="snake\solver\dqn\memory.py" />
+    <Compile Include="snake\solver\dqn\snakeaction.py" />
+    <Compile Include="snake\solver\dqn\__init__.py" />
+    <Compile Include="snake\solver\greedy.py" />
+    <Compile Include="snake\solver\hamilton.py" />
+    <Compile Include="snake\solver\path.py" />
+    <Compile Include="snake\solver\__init__.py" />
+    <Compile Include="snake\util\sumtree.py" />
+    <Compile Include="snake\util\__init__.py" />
+    <Compile Include="snake\__init__.py" />
+    <Compile Include="tests\base\test_direc.py" />
+    <Compile Include="tests\base\test_map.py" />
+    <Compile Include="tests\base\test_point.py" />
+    <Compile Include="tests\base\test_pos.py" />
+    <Compile Include="tests\base\test_snake.py" />
+    <Compile Include="tests\gui\test_gui.py" />
+    <Compile Include="tests\solver\test_hamilton.py" />
+    <Compile Include="tests\solver\test_path.py" />
+    <Compile Include="tests\util\test_sumtree.py" />
+    <Compile Include="tools\plot_dqn_compare.py" />
+    <Compile Include="tools\plot_dqn_history.py" />
+    <Compile Include="tools\print_ckpt.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docs\" />
+    <Folder Include="docs\images" />
+    <Folder Include="snake" />
+    <Folder Include="snake\base" />
+    <Folder Include="snake\solver" />
+    <Folder Include="snake\solver\dqn" />
+    <Folder Include="snake\util" />
+    <Folder Include="tests\" />
+    <Folder Include="tests\base" />
+    <Folder Include="tests\gui" />
+    <Folder Include="tests\solver" />
+    <Folder Include="tests\util" />
+    <Folder Include="tools" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
